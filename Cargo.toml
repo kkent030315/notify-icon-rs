@@ -1,0 +1,22 @@
+[package]
+name         = "notify-icon"
+description  = "A safe, ergonomic Rust wrapper around the Windows Shell_NotifyIcon API for managing system tray icons on Windows platforms"
+version      = "0.1.0"
+authors      = ["kkent030315"]
+keywords     = ["windows", "notification", "toast", "notify", "icon", "tray"]
+readme       = "README.md"
+repository   = "https://github.com/kkent030315/notify-icon-rs"
+license      = "MIT"
+exclude      = [".vscode/*", ".github/*"]
+edition      = "2024"
+rust-version = "1.85.0"
+
+[lib]
+doctest = true
+
+[dependencies]
+widestring = "1.2"
+
+[target.'cfg(target_env = "msvc")'.dependencies.windows]
+version  = "0.61"
+features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_UI_Shell"]
