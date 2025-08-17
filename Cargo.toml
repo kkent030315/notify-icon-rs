@@ -11,11 +11,18 @@ exclude      = [".vscode/*", ".github/*"]
 edition      = "2024"
 rust-version = "1.85.0"
 
+[package.metadata.docs.rs]
+default-target = "x86_64-pc-windows-msvc"
+
 [lib]
 doctest = true
 
 [dependencies]
 
 [target.'cfg(target_env = "msvc")'.dependencies.windows]
+version  = "0.61"
+features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_UI_Shell"]
+
+[target.'cfg(target_env = "gnu")'.dependencies.windows]
 version  = "0.61"
 features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_UI_Shell"]
