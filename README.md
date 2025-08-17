@@ -1,3 +1,5 @@
+[![CI](https://github.com/kkent030315/notify-icon-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/kkent030315/notify-icon-rs/actions/workflows/ci.yml)
+
 # notify-icon-rs
 
 A safe, ergonomic Rust wrapper around the Windows `Shell_NotifyIcon` API for managing system tray icons on Windows platforms.
