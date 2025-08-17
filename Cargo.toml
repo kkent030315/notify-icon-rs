@@ -15,7 +15,6 @@ rust-version = "1.85.0"
 doctest = true
 
 [dependencies]
-widestring = "1.2"
 
 [target.'cfg(target_env = "msvc")'.dependencies.windows]
 version  = "0.61"
